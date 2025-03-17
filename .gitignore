@@ -1,0 +1,28 @@
+# Ignore system files and directories
+*.exe
+*.log
+*.ini
+*.dat
+*.blf
+*.regtrans-ms
+
+# Ignore user directories
+/.anaconda/
+/.arduinoIDE/
+/.conda/
+/.continuum/
+/.dotnet/
+/.streamlit/
+/.venv/
+/.vscode/
+/AppData/
+/Contacts/
+/CrossDevice/
+/Documents/
+/Downloads/
+/Favorites/
+/Music/
+/OneDrive/
+/Saved Games/
+/Searches/
+/Videos/
