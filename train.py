@@ -21,20 +21,6 @@ def weighted_rating(x):
     R = x['vote_average']
     return (v/(v+m) * R) + (m/(m+v) * C)
 
-def build_chart(genre, percentile=0.90):
-    df = gen_md[gen_md['genre'] == genre]
-    vote_counts = df[df['vote_count'].notnull()]['vote_count'].astype('int')
-    vote_averages = df[df['vote_average'].notnull()]['vote_average'].astype('int')
-    C = vote_averages.mean()
-    m = vote_counts.quantile(percentile)
-    qualified = df[(df['vote_count'] >= m) & (df['vote_count'].notnull()) & (df['vote_average'].notnull())][['title', 'year', 'vote_count', 'vote_average', 'popularity']]
-    qualified=qualified.copy()
-    qualified['vote_count'] = qualified['vote_count'].astype('int')
-    qualified['vote_average'] = qualified['vote_average'].astype('int')
-    qualified['wr'] = qualified.apply(lambda x: (x['vote_count']/(x['vote_count']+m) * x['vote_average']) + (m/(m+x['vote_count']) * C), axis=1)
-    qualified = qualified.sort_values('wr', ascending=False).head(250)
-    return qualified
-
 def get_director(x):
     for i in x:
         if i['job'] == 'Director':
@@ -89,7 +75,6 @@ def hybrid(userId, title):
     movies = movies.sort_values('est', ascending=False)
     result=movies["title"]
     return result.head(5)
-
 
 md = pd. read_csv('data/movies_metadata.csv',low_memory=False).copy()
 md['genres'] = md['genres'].fillna('[]').apply(literal_eval).apply(lambda x: [i['name'] for i in x] if isinstance(x, list) else [])

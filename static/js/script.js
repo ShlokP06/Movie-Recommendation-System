@@ -4,17 +4,21 @@ document.getElementById("recommendations").style.display = "none";
 
 function toggle(){
     let drp=document.getElementById("method");
-    document.getElementById("userId").value = "";
-    document.getElementById('title').value ="";
     if (drp.value === "Content") {
+        document.getElementById("userId").value = "";
+        document.getElementById('title').value ="";
         document.getElementById("titleInput").style.display="block";
         document.getElementById("userIdInput").style.display="none";
     }
     else if (drp.value === "Collaborative") {
+        document.getElementById("userId").value = "";
+        document.getElementById('title').value ="";
         document.getElementById("titleInput").style.display="none";
         document.getElementById("userIdInput").style.display="block";
     }
     else if (drp.value === "Hybrid"){
+        document.getElementById("userId").value = "";
+        document.getElementById('title').value =""; 
         document.getElementById("titleInput").style.display="block";
         document.getElementById("userIdInput").style.display="block";
     }
