@@ -73,21 +73,26 @@ git clone https://github.com/ShlokP06/Movie-Recommender-System.git
 cd Movie-Recommender-System
 ```
 
-> 💡 **Tip**: If you want to download just a folder or specific file without cloning the full repo, use [GitHub1s](https://github1s.com/) or download the folder as a ZIP from the GitHub web interface.
-
 ### 2. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Launch the Flask App
+### 3. Clean the databse and train the ML Models
+
+```bash
+python main.py
+```
+
+
+### 4. Launch the Flask App
 
 ```bash
 python app.py
 ```
 
-### 4. Access the Application
+### 5. Access the Application
 
 Open your web browser and navigate to:[http://127.0.0.1:5000](http://127.0.0.1:5000)
 
@@ -95,25 +100,33 @@ Open your web browser and navigate to:[http://127.0.0.1:5000](http://127.0.0.1:5
 
 ## 📁 Directory Structure
 
+Currently, the models and processed folders are empty. However they will be populated with the required files after main.py is executed.
 ```
 Movie-Recommender-System/
-├── app.py                    # Flask backend script
-├── data/                     # Data files
-│   ├── movies.csv            # Movie metadata
-│   ├── ratings.csv           # User ratings
-│   └── ...                   # Other relevant CSVs or datasets
-├── models/                   # Serialized model files
-│   ├── cosine_sim.npy        # Content similarity matrix
-│   └── model_compressed.pkl  # Trained hybrid or collaborative model
-├── static/                   # Static assets
-│   ├── css/                  # CSS styles
-│   └── js/                   # JavaScript files
-├── templates/                # HTML templates
-│   ├── index.html            # Homepage template
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
-```
-
+├── app.py                      # Flask backend script
+├── main.py                     # Script for preprocessing and generating models
+├── data/                       # Raw data files
+│   ├── movies.csv              # Movie metadata
+│   ├── ratings.csv             # User ratings
+│   ├── links.csv               # Movie ID links
+│   └── ...                     # Other relevant CSVs or datasets
+├── processed/                  # Preprocessed/generated data files
+│   ├── processed_links.csv
+│   ├── processed_metadata.csv
+│   ├── processed_ratings.csv
+│   └── ...                     # Other files created by main.py
+├── models/                     # Serialized model files
+│   ├── cosine_sim.npy          # Content similarity matrix
+│   └── model_compressed.pkl    # Trained hybrid or collaborative model
+├── static/                     # Static assets
+│   ├── css/
+│   │   └── style.css           # Custom CSS styles
+│   ├── js/                     # JavaScript files (if any)
+│   └── UI.png                  # Screenshot of UI
+├── templates/                  # HTML templates
+│   └── index.html              # Homepage template
+├── requirements.txt            # Python dependencies
+└── README.md                   # Project documentation
 ---
 
 ## 📚 Future Enhancements
