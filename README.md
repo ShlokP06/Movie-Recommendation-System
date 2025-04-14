@@ -127,7 +127,7 @@ Movie-Recommender-System/
 │   └── index.html              # Homepage template
 ├── requirements.txt            # Python dependencies
 └── README.md                   # Project documentation
----
+```
 
 ## 📚 Future Enhancements
 
