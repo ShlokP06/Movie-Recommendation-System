@@ -147,7 +147,9 @@ Contributions are welcome! If you have suggestions for improvements or wish to a
 ## 📬 Connect With Me
 
 **Shlok P** – [GitHub](https://github.com/ShlokP06)
+
 **LinkedIn** – [https://www.linkedin.com/in/shlok-parikh-370773335/](https://www.linkedin.com/in/shlok-parikh-370773335/)
+
 **Email** – [shlokparikhchoco@gmail.com](mailto\:shlokparikhchoco@gmail.com)
 
 For questions, suggestions, or collaborations, feel free to reach out!
