@@ -135,11 +135,11 @@ Contributions are welcome! If you have suggestions for improvements or wish to a
 ## 📸 Visual Previews
 
 ### Screenshot
-(![static/UI.png](https://github.com/ShlokP06/Movie-Recommendation-System/blob/master/static/UI.png))
+![static/UI.png](https://github.com/ShlokP06/Movie-Recommendation-System/blob/master/static/UI.png)
 
 
 ### Screen Recording
-[![static/UI.png](https://github.com/ShlokP06/Movie-Recommendation-System/blob/master/static/UI.png))](https://github.com/ShlokP06/Movie-Recommendation-System/blob/master/static/demo.mp4)
+[![static/UI.png](https://github.com/ShlokP06/Movie-Recommendation-System/blob/master/static/UI.png)](https://drive.google.com/file/d/1bWY20H72BWaC06gIDN8VKGuvjf2utbhb/view?usp=sharing)
 
 
 ---
