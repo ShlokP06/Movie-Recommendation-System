@@ -79,10 +79,8 @@ def hybrid(userId, title, id_map, cosine_sim, smd, algo):
         idx = indices[title]
     except KeyError as e:
         return "Not Found"
-    id_map.reset_index(inplace=True)
-    print(id_map.columns)
-    tmdbId = id_map.loc[id_map['index']==title]['id']
-    movieId = id_map.loc[id_map['index']==title]['movieId']
+    tmdbId = id_map.loc[id_map['ind']==title]['id']
+    movieId = id_map.loc[id_map['ind']==title]['movieId']
     sim_scores = list(enumerate(cosine_sim[int(idx)]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = sim_scores[1:26]
@@ -185,6 +183,8 @@ if __name__ == "__main__":
     indices_map = indices_map.set_index('id')
     id_map.reset_index(inplace=True)
     id_map.set_index('title',inplace=True)
+    id_map.index.name = 'ind'
+    id_map.reset_index(inplace=True)
     
     np.save('models/cosine_sim.npy',cosine_sim)
     md.to_csv("processed/processed_metadata.csv",index=False)
