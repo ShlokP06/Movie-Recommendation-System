@@ -3,6 +3,3 @@ GD4/processed/processed_credits.csv filter=lfs diff=lfs merge=lfs -text
 GD4/cosine_sim.npy filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
 *.npy filter=lfs diff=lfs merge=lfs -text
-*csv filter=lfs diff=lfs merge=lfs -text
-*.json filter=lfs diff=lfs merge=lfs -text
-*.zip filter=lfs diff=lfs merge=lfs -text
